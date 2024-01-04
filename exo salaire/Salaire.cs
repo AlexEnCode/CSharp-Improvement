@@ -36,7 +36,7 @@ namespace exo_salaire
 
         public Salarie()
         {
-            _nombreSalarie++;
+            Salarie._nombreSalarie++;
         }
 
         // Methode
@@ -45,10 +45,11 @@ namespace exo_salaire
         {
             Console.WriteLine("Le salaire de " + Nom + " est de " + Salaire + "Euros. Son matricule est : " + Matricule);
         }
+
+
         // Constructeur
 
-
-        public Salarie(Guid matricule, string service, string categorie, string nom, int salaire) : this() // a revoir
+                public Salarie(Guid matricule, string service, string categorie, string nom, int salaire) : this() // a revoir
         {
             Matricule = matricule;
             Service = service;
