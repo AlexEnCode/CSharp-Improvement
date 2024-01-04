@@ -1,0 +1,27 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.34330.188
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Demo01Classes", "POOCSharp\Demo01Classes.csproj", "{3D9A3965-6BCB-47B9-B722-EAE28D42F50D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "NewFolder1", "NewFolder1", "{450B709A-C737-4BEF-BEE0-886631736B72}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3D9A3965-6BCB-47B9-B722-EAE28D42F50D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3D9A3965-6BCB-47B9-B722-EAE28D42F50D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3D9A3965-6BCB-47B9-B722-EAE28D42F50D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3D9A3965-6BCB-47B9-B722-EAE28D42F50D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {99E95949-CDC8-4AB0-854B-728CD85D5F46}
+	EndGlobalSection
+EndGlobal
