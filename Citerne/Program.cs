@@ -1,10 +1,12 @@
-﻿using Citerne;
+﻿using System.Collections.Generic;
+using Citerne;
 
 void marge()
 {
     Console.WriteLine();
     Console.WriteLine("------------------------------------------------------------------------------------------------");
     Console.WriteLine();
+
 }
 
  WaterTank Citerne1 = new WaterTank("Lassie Terne", 10, 20, 0);
@@ -42,8 +44,8 @@ marge();
 
     Console.Write("Combien d'eau rajoutes tu dans les citernes ? ");
     string? h = Console.ReadLine();
-    double flotte;
-    double.TryParse(h, out flotte);
+int flotte;
+int.TryParse(h, out flotte);
 
 
 double exces;
@@ -60,6 +62,41 @@ else
         exces =  flotte - mesCiterne[i].Capacite;
              
     }
-    Console.WriteLine("Après ajouts, il y a " + mesCiterne[i].Niveau + " Tonne d'eau dans la citerne, et " + exces + " Tonne en d'excès.");
+    Console.WriteLine("\tAprès ajouts, il y a " + mesCiterne[i].Niveau + " Tonne d'eau dans la citerne, et " + exces + " Tonne d'eau en d'excès.");
 }
 marge();
+
+
+
+
+Console.Write("Combien d'eau retire tu dans les citernes ? ");
+string? j = Console.ReadLine();
+int deflotte;
+int.TryParse(j, out deflotte);
+
+
+for (int i = 0; i < mesCiterne.Count; i++)
+{
+    if (flotte <= mesCiterne[i].Capacite)
+    {
+        mesCiterne[i].Niveau = flotte - deflotte;
+        exces = 0;
+    }
+    else
+    {
+        mesCiterne[i].Niveau = mesCiterne[i].Capacite;
+        exces = deflotte - mesCiterne[i].Capacite;
+
+    }
+    if (exces <= 0)
+        exces = 0;
+
+    Console.WriteLine("\tAprès ajouts, il y a " + mesCiterne[i].Niveau + " Tonne d'eau dans la citerne, et " + exces + " Tonne d'eau en d'excès.");
+}
+
+
+marge();
+
+for (int i = 0; i < mesCiterne.Count; i++)
+    mesCiterne[i].AffichageCiterne();
+
