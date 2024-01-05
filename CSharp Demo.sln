@@ -7,9 +7,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Demo01Classes", "POOCSharp\
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Exo Force", "Exo Force", "{450B709A-C737-4BEF-BEE0-886631736B72}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleApp1", "ConsoleApp1\ConsoleApp1.csproj", "{3EDDD961-1735-4A6B-A682-EABE5716B460}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConsoleApp1", "ConsoleApp1\ConsoleApp1.csproj", "{3EDDD961-1735-4A6B-A682-EABE5716B460}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "exo salaire", "exo salaire\exo salaire.csproj", "{A4FDCB61-61BF-4C27-B827-F2D40F9C79EA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "exo salaire", "exo salaire\exo salaire.csproj", "{A4FDCB61-61BF-4C27-B827-F2D40F9C79EA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Citerne", "Citerne\Citerne.csproj", "{AC427CBD-ED88-4341-A13D-CC7D233B986D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -29,6 +31,10 @@ Global
 		{A4FDCB61-61BF-4C27-B827-F2D40F9C79EA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A4FDCB61-61BF-4C27-B827-F2D40F9C79EA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A4FDCB61-61BF-4C27-B827-F2D40F9C79EA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AC427CBD-ED88-4341-A13D-CC7D233B986D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AC427CBD-ED88-4341-A13D-CC7D233B986D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AC427CBD-ED88-4341-A13D-CC7D233B986D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AC427CBD-ED88-4341-A13D-CC7D233B986D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
