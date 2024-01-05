@@ -30,6 +30,7 @@ namespace exo_salaire
 
 
 
+
         // propiété static est relative a la classe
 
         public static int NombreSalarie { get; set; } = 0;
