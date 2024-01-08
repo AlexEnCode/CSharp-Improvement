@@ -1,32 +1,92 @@
-﻿using Salaire2;
+﻿using System.ComponentModel.DataAnnotations.Schema;
+using Salaire2;
 
-List<Salarie> salaries = new List<Salarie>
+string question(string qst)
 {
-    new Salarie("001", "Chloé", "Comptabilité", "Cadre", 24000),
-    new Salarie("002", "Emma", "Comptabilité", "Employée", 30000),
-    new Salarie("003", "Georges", "Developpement", "Employé", 26000),
-    new Salarie(),
-};
+    Console.Write(qst);
+    return Console.ReadLine();
+}
+double questionDouble(string qst)
+{
+    Console.Write(qst);
+    string? h = Console.ReadLine();
+    double i;
+    double.TryParse(h, out i);
+    return i;
+}
 
-foreach (Salarie salarie in salaries)
+void request()
 {
-    salarie.AfficherSalaire();
+   string nom = question("Merci de saisir le nom :");
+   string matricule = question("Merci de saisir le matricule :");
+   string categorie = question("Merci de saisir la catégorie :");
+   string service = question("Merci de saisir le service :");
+   double Salaire = questionDouble("Merci de saisir le salaire :");
+}
+
+void requestComm()
+{
+    double ca = questionDouble("Merci de saisir le chiffre d'affaire :");
+    double commission = questionDouble("Merci de saisir la commission :");
 }
 
 
-Console.WriteLine("Nombre de salariés : " + Salarie.NombreSalaries);
-Console.WriteLine("Salaire total : " + Salarie.TotalSalaires);
+void menuing()
+{
+    Console.WriteLine("--- Ajouter des employés ---\n ");
+    Console.Write("1----Salarié" +
+    "\n2----Commerciale" +
+    "\n0----Retour" +
+    "\n\nFaites votre choix : ");
+}
 
-Console.WriteLine("On change le salaire de Chloé à 500000.");
-salaries[0].Salaire = 500000;
+bool quitter = false;
 
-Console.WriteLine("Nombre de salariés : " + Salarie.NombreSalaries);
-Console.WriteLine("Salaire total : " + Salarie.TotalSalaires);
+while (!quitter)
+{
+    string choice;
+    Console.WriteLine("--- Gestion des employés ---\n ");
+    Console.Write("1----Ajouter un employé" +
+        "\n2----Afficher le salaire des employés" +
+        "\n3----Rechercher un employé" +
+        "\n0----Quitter" +
+        "\n\nFaites votre choix : ");
+    choice = Console.ReadLine();
+    Console.Clear();
 
-Console.WriteLine("Remise à zéro des salariés et salaire total.");
-Salarie.RemiseAZero();
 
-Console.WriteLine("Nombre de salariés : " + Salarie.NombreSalaries);
-Console.WriteLine("Salaire total : " + Salarie.TotalSalaires);
+    switch (choice)
+    {
+        case "1":
+            menuing();
+            string Choise1 = Console.ReadLine();
+                   
+            switch (Choise1)
+            {
+                case "1":
+                    request();
+                    break;
+                
+                case "2":
+                    request();
+                    requestComm();
+                    break;
+                    default: Console.WriteLine("Erreur de saisie, recommencez !");
+                    break;
+            }
+            break;
 
+        case "2":
+           
+        case "3":
+            
+        case "4":
 
+        case "0":
+            quitter = true; // return ou env exit
+            break;
+        default:
+            Console.WriteLine("Erreur de saisie, recommencez !");
+            break;
+    }
+}
