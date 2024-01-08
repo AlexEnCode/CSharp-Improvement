@@ -15,7 +15,19 @@ double questionDouble(string qst)
     return i;
 }
 
-void request()
+
+
+{
+    Salarie salarie = CreerSalarie();
+
+    Console.WriteLine("Informations de l'employé généré :");
+    Console.WriteLine($"Nom: {salarie.Nom}");
+    Console.WriteLine($"Matricule: {salarie.Matricule}");
+    Console.WriteLine($"Catégorie: {salarie.Categorie}");
+    Console.WriteLine($"Service: {salarie.Service}");
+    Console.WriteLine($"Salaire: {salarie.Salaire}");
+}
+ Salarie CreerSalarie()
 {
    string nom = question("Merci de saisir le nom :");
    string matricule = question("Merci de saisir le matricule :");
@@ -30,6 +42,12 @@ void requestComm()
     double commission = questionDouble("Merci de saisir la commission :");
 }
 
+
+
+void creatObjectCommercial()
+{
+
+}
 
 void menuing()
 {
@@ -77,14 +95,24 @@ while (!quitter)
             break;
 
         case "2":
-           
+            Console.WriteLine("--- Salaire des employés ---\n ");
+            foreach (object Salarie in Salarie){ 
+                Console.WriteLine("Le salaire fixe de" + Salarie.Nom + " est de " + Salarie.Salaire + " euros.");}
+            foreach (object Commercial in Commercial ){ 
+                Console.WriteLine("Le salaire fixe de" + Commercial.Nom + " est de " + Commercial.Salaire + " euros.\t Le saaire avec commission est de " + Commercial.commission + " euros.");}
+
+            break;
+
         case "3":
-            
-        case "4":
+            Console.WriteLine("--- Recherche des employés ---\n ");
+            Console.Write("Merci de saisir un nom");
+
+            break;
 
         case "0":
-            quitter = true; // return ou env exit
+            quitter = true; 
             break;
+
         default:
             Console.WriteLine("Erreur de saisie, recommencez !");
             break;

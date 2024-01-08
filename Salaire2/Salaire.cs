@@ -58,3 +58,4 @@ public class Salarie
         TotalSalaires = 0;
     }
 }
+
