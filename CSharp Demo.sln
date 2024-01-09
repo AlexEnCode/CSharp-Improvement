@@ -13,7 +13,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "exo salaire", "exo salaire\
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Citerne", "Citerne\Citerne.csproj", "{AC427CBD-ED88-4341-A13D-CC7D233B986D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Salaire2", "Salaire2\Salaire2.csproj", "{F5AE9566-2522-4577-840C-9F2EE54C4844}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Salaire2", "Salaire2\Salaire2.csproj", "{F5AE9566-2522-4577-840C-9F2EE54C4844}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Compte bancaire", "Compte bancaire\Compte bancaire.csproj", "{7E922578-7F35-4A53-AE56-EC37F947EC66}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -41,6 +43,10 @@ Global
 		{F5AE9566-2522-4577-840C-9F2EE54C4844}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F5AE9566-2522-4577-840C-9F2EE54C4844}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F5AE9566-2522-4577-840C-9F2EE54C4844}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7E922578-7F35-4A53-AE56-EC37F947EC66}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7E922578-7F35-4A53-AE56-EC37F947EC66}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7E922578-7F35-4A53-AE56-EC37F947EC66}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7E922578-7F35-4A53-AE56-EC37F947EC66}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
