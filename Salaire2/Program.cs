@@ -6,20 +6,51 @@ string question(string qst)
     Console.Write(qst);
     return Console.ReadLine();
 }
-double questionDouble(string qst)
+decimal questionDouble(string qst)
 {
     Console.Write(qst);
     string? h = Console.ReadLine();
-    double i;
-    double.TryParse(h, out i);
+    decimal i;
+    decimal.TryParse(h, out i);
     return i;
 }
 
 
-
+List<Salarie> listeSalaries = new(20);
+Salarie CreerSalarie()  
 {
-    Salarie salarie = CreerSalarie();
+   string nom = question("Merci de saisir le nom :");
+   string matricule = question("Merci de saisir le matricule :");
+   string categorie = question("Merci de saisir la catégorie :");
+   string service = question("Merci de saisir le service :");
+    decimal Salaire = questionDouble("Merci de saisir le salaire :");
 
+    
+    return new Salarie(nom, matricule, categorie, service, Salaire);
+}
+
+List<Commercial> listeCommerciaux = new(20);
+Commercial CreerCommercial()  
+{
+    string nom = question("Merci de saisir le nom :");
+    string matricule = question("Merci de saisir le matricule :");
+    string categorie = question("Merci de saisir la catégorie :");
+    string service = question("Merci de saisir le service :");
+    decimal Salaire = questionDouble("Merci de saisir le salaire :");
+    decimal ca = questionDouble("Merci de saisir le chiffre d'affaire :");
+    decimal comission = questionDouble("Merci de saisir la comission :");
+
+    return new Commercial(nom, matricule, categorie, service, Salaire, ca, comission);
+}
+
+
+
+
+
+
+/*
+    Salarie salarie = CreerSalarie(),
+{
     Console.WriteLine("Informations de l'employé généré :");
     Console.WriteLine($"Nom: {salarie.Nom}");
     Console.WriteLine($"Matricule: {salarie.Matricule}");
@@ -27,27 +58,19 @@ double questionDouble(string qst)
     Console.WriteLine($"Service: {salarie.Service}");
     Console.WriteLine($"Salaire: {salarie.Salaire}");
 }
- Salarie CreerSalarie() // request()
+
+
+    Commercial commercial = CreerCommercial()
 {
-   string nom = question("Merci de saisir le nom :");
-   string matricule = question("Merci de saisir le matricule :");
-   string categorie = question("Merci de saisir la catégorie :");
-   string service = question("Merci de saisir le service :");
-   double Salaire = questionDouble("Merci de saisir le salaire :");
-}
-
-void requestComm()
-{
-    double ca = questionDouble("Merci de saisir le chiffre d'affaire :");
-    double commission = questionDouble("Merci de saisir la commission :");
-}
-
-
-
-void creatObjectCommercial()
-{
-
-}
+    Console.WriteLine("Informations de l'employé généré :");
+    Console.WriteLine($"Nom: {commercial.Nom}");
+    Console.WriteLine($"Matricule: {commercial.Matricule}");
+    Console.WriteLine($"Catégorie: {commercial.Categorie}");
+    Console.WriteLine($"Service: {commercial.Service}");
+    Console.WriteLine($"Salaire: {commercial.Salaire}");
+    Console.WriteLine($"Chiffre d'Affaire: {commercial.Ca}");
+    Console.WriteLine($"Commission: {commercial.Commission}");
+}*/
 
 void menuing()
 {
@@ -82,12 +105,11 @@ while (!quitter)
             switch (Choise1)
             {
                 case "1":
-                    request();
+                    CreerSalarie();
                     break;
                 
                 case "2":
-                    request();
-                    requestComm();
+                    CreerCommercial();
                     break;
                     default: Console.WriteLine("Erreur de saisie, recommencez !");
                     break;
@@ -96,10 +118,12 @@ while (!quitter)
 
         case "2":
             Console.WriteLine("--- Salaire des employés ---\n ");
-            foreach (object Salarie in Salarie){ 
+            foreach (Salarie Salarie in ListeSalarie){ 
                 Console.WriteLine("Le salaire fixe de" + Salarie.Nom + " est de " + Salarie.Salaire + " euros.");}
-            foreach (object Commercial in Commercial ){ 
-                Console.WriteLine("Le salaire fixe de" + Commercial.Nom + " est de " + Commercial.Salaire + " euros.\t Le saaire avec commission est de " + Commercial.commission + " euros.");}
+
+            foreach (Commercial Commercial in ListeCommercial)
+            { 
+                Console.WriteLine("Le salaire fixe de" + Commercial.Nom + " est de " + Commercial.Salaire + " euros.\t Le saaire avec commission est de " + Commercial.Commission + " euros.");}
 
             break;
 

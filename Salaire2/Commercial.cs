@@ -9,19 +9,20 @@ namespace Salaire2
 {
     internal class Commercial : Salarie
     {
-        private double _ca;
-        private double _commission;
+        private decimal _ca;
+        private decimal _comission;
 
 
-        public double Ca { get => _ca; set => _ca = value; }
-        public double Commission { get => _commission; set => _commission = value; }
+        public decimal Ca { get => _ca; set => _ca = value; }
+        public decimal Comission { get => _comission; set => _comission = value; }
 
 
-        public Commercial(double ca, double commission, string matricule, string nom, string service, string categorie, decimal salaire ) : base(matricule, nom, service, categorie, salaire)
+        public Commercial( string matricule, string nom, string service, string categorie, decimal salaire, decimal ca, decimal comission) : base(matricule, nom, service, categorie, salaire)
         {
             Ca = ca;
-            Commission = commission;
+            Comission = comission;
         }
+
 
     }
 }
